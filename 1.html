@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الصفحة الرئيسية</title>
+    <title>الرئيسية | منصة الطلاب</title>
     <!-- استدعاء Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- استدعاء خط "Cairo" -->
@@ -21,7 +21,6 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
         }
-        /* تأثير الزجاج */
         .glass-effect {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(5px);
@@ -38,9 +37,9 @@
 </head>
 <body class="flex flex-col min-h-screen text-gray-800">
 
-    <!-- شريط التنقل (Navbar) -->
+    <!-- شريط التنقل الموحد -->
     <nav class="bg-white/90 backdrop-blur-md shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div class="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
             <a href="1.html" class="flex items-center gap-2 text-2xl font-bold text-indigo-700">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
@@ -48,13 +47,14 @@
                 منصة الطلاب
             </a>
             
-            <!-- روابط سطح المكتب -->
-            <div class="hidden md:flex space-x-1 space-x-reverse">
-                <a href="index.html" class="px-4 py-2 rounded-md hover:bg-indigo-50 text-gray-700 font-medium transition">الواجهة</a>
-                <!-- الزر النشط حالياً: الرئيسية -->
-                <a href="1.html" class="px-4 py-2 rounded-md bg-indigo-600 text-white font-medium transition shadow-md">الرئيسية</a>
-                <a href="الفرقه الاولي.html" class="px-4 py-2 rounded-md hover:bg-indigo-50 text-gray-700 font-medium transition">محاضرات الفرقة الأولى</a>
-                <a href="الفرقه الثانيه.HTML" class="px-4 py-2 rounded-md hover:bg-indigo-50 text-gray-700 font-medium transition">محاضرات الفرقة الثانية</a>
+            <!-- روابط التنقل -->
+            <div class="flex flex-wrap justify-center gap-2">
+                <a href="index.html" class="px-3 py-1 rounded-lg hover:bg-indigo-100 text-gray-700 font-medium transition text-sm">الواجهة</a>
+                <a href="1.html" class="px-3 py-1 rounded-lg bg-indigo-600 text-white font-medium transition text-sm shadow-md">الرئيسية</a>
+                <a href="الفرقه الاولي.html" class="px-3 py-1 rounded-lg hover:bg-indigo-100 text-gray-700 font-medium transition text-sm">الفرقة 1</a>
+                <a href="الفرقه الثانيه.HTML" class="px-3 py-1 rounded-lg hover:bg-indigo-100 text-gray-700 font-medium transition text-sm">الفرقة 2</a>
+                <a href="الفرقه الثالثه.html" class="px-3 py-1 rounded-lg hover:bg-indigo-100 text-gray-700 font-medium transition text-sm">الفرقة 3</a>
+                <a href="الفرقه الرابعه.html" class="px-3 py-1 rounded-lg hover:bg-indigo-100 text-gray-700 font-medium transition text-sm">الفرقة 4</a>
             </div>
 
             <a href="https://wa.me/201286094595" target="_blank" class="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full font-bold transition shadow-lg transform active:scale-95">
@@ -71,12 +71,10 @@
         <div class="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-slate-800/70"></div>
         <div class="container mx-auto px-4 relative z-10 text-center">
             
-            <!-- العنوان الرئيسي -->
             <h1 class="text-3xl md:text-5xl font-extrabold mb-8 leading-tight text-orange-400 text-shadow underline decoration-orange-500/30 underline-offset-8">
                 هذا الموقع ليس له علاقة بالمعهد
             </h1>
             
-            <!-- الرسالة الشخصية -->
             <div class="max-w-3xl mx-auto bg-black/40 backdrop-blur-md p-8 rounded-2xl border border-white/20 shadow-2xl">
                 <p class="text-xl md:text-2xl text-orange-50 font-medium mb-6 leading-relaxed">
                     "أنا طالب زيك يا صديقي.. عملت الموقع دا علشان يساعدني إني أذاكر وأساعدكم برضو لأن معظم الطلاب من محافظات مختلفة، فياريت تدعيلي ❤️"
@@ -87,7 +85,6 @@
                 </p>
             </div>
 
-            <!-- تنويه هام جدا -->
             <div class="mt-12 animate-bounce">
                 <div class="inline-block bg-red-600 text-white px-6 py-4 rounded-full font-bold shadow-lg border-2 border-red-400 text-lg md:text-xl transform hover:scale-105 transition duration-300">
                     ⚠️ تنويه هام جداً: القلم بيغلط يا صديقي فمتعتمدش اعتماد كلي على الموقع
@@ -98,15 +95,34 @@
     </header>
 
      <!-- روابط سريعة للفرق -->
-     <section class="container mx-auto px-4 py-8 relative z-20 -mt-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-            <a href="الفرقه الاولي.html" class="glass-effect p-6 rounded-xl text-center hover-card cursor-pointer border-t-4 border-indigo-500">
+     <section class="container mx-auto px-4 py-8 relative z-20 -mt-10 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+            <!-- الفرقة الأولى -->
+            <a href="الفرقه الاولي.html" class="glass-effect p-6 rounded-xl text-center hover-card cursor-pointer border-t-4 border-indigo-500 hover:bg-white">
+                <div class="w-12 h-12 bg-indigo-100 text-indigo-700 rounded-full flex items-center justify-center mx-auto mb-3 font-bold text-xl">1</div>
                 <h3 class="text-xl font-bold text-indigo-700">الفرقة الأولى</h3>
-                <p class="text-sm text-gray-600">اضغط للدخول للمحاضرات</p>
+                <p class="text-xs text-gray-500 mt-1">اضغط للدخول</p>
             </a>
-            <a href="الفرقه الثانيه.HTML" class="glass-effect p-6 rounded-xl text-center hover-card cursor-pointer border-t-4 border-emerald-500">
+            
+            <!-- الفرقة الثانية -->
+            <a href="الفرقه الثانيه.HTML" class="glass-effect p-6 rounded-xl text-center hover-card cursor-pointer border-t-4 border-emerald-500 hover:bg-white">
+                <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto mb-3 font-bold text-xl">2</div>
                 <h3 class="text-xl font-bold text-emerald-700">الفرقة الثانية</h3>
-                <p class="text-sm text-gray-600">اضغط للدخول للمحاضرات</p>
+                <p class="text-xs text-gray-500 mt-1">اضغط للدخول</p>
+            </a>
+
+            <!-- الفرقة الثالثة -->
+            <a href="الفرقه الثالثه.html" class="glass-effect p-6 rounded-xl text-center hover-card cursor-pointer border-t-4 border-amber-500 hover:bg-white">
+                <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center mx-auto mb-3 font-bold text-xl">3</div>
+                <h3 class="text-xl font-bold text-amber-700">الفرقة الثالثة</h3>
+                <p class="text-xs text-gray-500 mt-1">اضغط للدخول</p>
+            </a>
+
+            <!-- الفرقة الرابعة -->
+            <a href="الفرقه الرابعه.html" class="glass-effect p-6 rounded-xl text-center hover-card cursor-pointer border-t-4 border-sky-500 hover:bg-white">
+                <div class="w-12 h-12 bg-sky-100 text-sky-700 rounded-full flex items-center justify-center mx-auto mb-3 font-bold text-xl">4</div>
+                <h3 class="text-xl font-bold text-sky-700">الفرقة الرابعة</h3>
+                <p class="text-xs text-gray-500 mt-1">اضغط للدخول</p>
             </a>
         </div>
     </section>
@@ -120,3 +136,4 @@
 
 </body>
 </html>
+
