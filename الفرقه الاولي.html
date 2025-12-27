@@ -16,7 +16,6 @@
             background-color: #f8fafc;
         }
         .page-bg {
-            /* نفس الصورة التي اخترتها أنت ولكن بجودة أعلى للخلفية */
             background-image: url("https://images.pexels.com/photos/6005436/pexels-photo-6005436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
             background-size: cover;
             background-position: center;
@@ -27,7 +26,6 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.5);
         }
-        /* تأثير النبض للانتظار */
         .pulse-ring {
             animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
         }
@@ -40,24 +38,29 @@
 </head>
 <body class="flex flex-col min-h-screen text-gray-800 page-bg">
 
-    <!-- طبقة تغطية خفيفة على الخلفية لزيادة وضوح النصوص -->
     <div class="fixed inset-0 bg-slate-900/40 z-0"></div>
 
-    <!-- شريط التنقل (Navbar) -->
+    <!-- شريط التنقل الموحد (تم التحديث ليضم كل الفرق) -->
     <nav class="glass-panel sticky top-0 z-50 shadow-sm border-b border-white/20">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-2 text-xl font-bold text-indigo-700">
+        <div class="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
+            <a href="1.html" class="flex items-center gap-2 text-xl font-bold text-indigo-700">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
                 منصة الطلاب
             </a>
             
-            <div class="hidden md:flex space-x-2 space-x-reverse">
-                <a href="index.html" class="px-3 py-1.5 rounded-lg hover:bg-indigo-100 text-gray-700 font-medium transition text-sm">الواجهة</a>
-                <a href="1.html" class="px-3 py-1.5 rounded-lg hover:bg-indigo-100 text-gray-700 font-medium transition text-sm">الرئيسية</a>
-                <a href="الفرقه الاولي.html" class="px-3 py-1.5 rounded-lg bg-indigo-600 text-white font-medium transition text-sm shadow-md">محاضرات الفرقة الأولى</a>
-                <a href="الفرقه الثانيه.HTML" class="px-3 py-1.5 rounded-lg hover:bg-indigo-100 text-gray-700 font-medium transition text-sm">محاضرات الفرقة الثانية</a>
+            <!-- روابط التنقل -->
+            <div class="flex flex-wrap justify-center gap-2">
+                <a href="index.html" class="px-3 py-1 rounded-lg hover:bg-indigo-100 text-gray-700 font-medium transition text-sm">الواجهة</a>
+                <a href="1.html" class="px-3 py-1 rounded-lg hover:bg-indigo-100 text-gray-700 font-medium transition text-sm">الرئيسية</a>
+                
+                <!-- الزر النشط (الفرقة 1) -->
+                <a href="الفرقه الاولي.html" class="px-3 py-1 rounded-lg bg-indigo-600 text-white font-medium transition text-sm shadow-md">الفرقة 1</a>
+                
+                <a href="الفرقه الثانيه.HTML" class="px-3 py-1 rounded-lg hover:bg-indigo-100 text-gray-700 font-medium transition text-sm">الفرقة 2</a>
+                <a href="الفرقه الثالثه.html" class="px-3 py-1 rounded-lg hover:bg-indigo-100 text-gray-700 font-medium transition text-sm">الفرقة 3</a>
+                <a href="الفرقه الرابعه.html" class="px-3 py-1 rounded-lg hover:bg-indigo-100 text-gray-700 font-medium transition text-sm">الفرقة 4</a>
             </div>
 
             <a href="https://wa.me/201286094595" target="_blank" class="bg-green-500 hover:bg-green-600 text-white p-2 rounded-full shadow-lg transition transform hover:scale-110">
@@ -108,7 +111,6 @@
             </div>
 
             <!-- صورة توضيحية -->
-            <!-- ملاحظة: استبدلت صورة bask7.jpeg بصورة من الإنترنت لأن الصور المحلية لا تظهر للزوار -->
             <div class="mt-8 opacity-90 hover:opacity-100 transition duration-500">
                 <img src="https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Student Studying" class="w-full h-48 object-cover rounded-xl shadow-md mx-auto max-w-sm">
                 <p class="text-xs text-gray-500 mt-2">بالتوفيق للجميع ❤️</p>
@@ -126,3 +128,4 @@
 
 </body>
 </html>
+
