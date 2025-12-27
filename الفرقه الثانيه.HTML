@@ -1,127 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محاضرات الفرقه الثانيه</title>
-    <style> h3{
-        color: #0407a5;
-        font-size: 30px;
-        font-family:'Times New Roman', Times, serif
-    }
-    body {
-        background-color:#ffffff; /* لون الخلفية */
-        background-image: url("https://images.pexels.com/photos/6927347/pexels-photo-6927347.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); /* رابط الصورة كخلفية */
-        background-repeat: no-repeat; /* عدم تكرار الصورة */
-        background-size: cover; /* تغطية الصورة للشاشة بالكامل */
-    } 
-    /* تعريف الأنماط للشاشات التي عرضها أكبر من 600px */
-@media screen and (min-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
-}
-
-/* تعريف الأنماط للشاشات التي عرضها أقل من 600px */
-@media screen and (max-width: 599px) {
-  body {
-    background-color: lavender;
-  }
-}
-</style>
+    <title>الفرقة الثانية | المحاضرات</title>
+    <!-- استدعاء Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- استدعاء خط "Cairo" -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background-color: #f0fdf4;
+        }
+        .page-bg {
+            background-image: url("https://images.pexels.com/photos/6927347/pexels-photo-6927347.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        /* تنسيق القوائم المنسدلة */
+        details summary {
+            list-style: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary {
+            background-color: #059669; /* emerald-600 */
+            color: white;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        details[open] summary svg {
+            transform: rotate(180deg);
+        }
+        .content-box {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
-<body align="center" link="red">
-        
-        
-        <nav>
-            <a href="index.html"> <button>الواجهه</button></a>
-            <a href="1.html"><button>الرئيسية</button></a>
-            <a href="الفرقه الاولي.html"><button>محاضرات الفرقه الاولي</button></a>
-            <a href="الفرقه الثانيه.HTML"> <button>محاضرات الفرقه الثانيه</button></a>
-            <a href="https://wa.me/201286094595" target="_blank"> <button>WhatsApp</button></a>
-            
-        </nav>
-    <br>
-    <br>
-    <br>
-<h3>جميع محاضرات الفرقه الثانيه </h3>
-<br>
-<br>
-<div>
-    <a href=""><button>القانون التجاري </button> </a>
-    <br>
-            <details>
-            <summary> لعرض المحاضرات</summary>
-        
+<body class="flex flex-col min-h-screen text-gray-800 page-bg">
 
-        <p>
-            <a href="https://drive.google.com/file/d/15QMqaz1PiLsT-B7PSUL-ED1tENQ3F6Cj/view?usp=share_link" target="_new">
-            بنك الأسئلة
+    <!-- طبقة تغطية خفيفة -->
+    <div class="fixed inset-0 bg-emerald-900/30 z-0"></div>
+
+    <!-- شريط التنقل (Navbar) -->
+    <nav class="glass-panel sticky top-0 z-50 shadow-sm border-b border-white/20">
+        <div class="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
+            <a href="1.html" class="flex items-center gap-2 text-xl font-bold text-emerald-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+                منصة الطلاب
+            </a>
+            
+            <div class="flex flex-wrap justify-center gap-2">
+                <a href="index.html" class="px-3 py-1 rounded-lg hover:bg-emerald-100 text-gray-700 font-medium transition text-sm">الواجهة</a>
+                <a href="1.html" class="px-3 py-1 rounded-lg hover:bg-emerald-100 text-gray-700 font-medium transition text-sm">الرئيسية</a>
+                <a href="الفرقه الاولي.html" class="px-3 py-1 rounded-lg hover:bg-emerald-100 text-gray-700 font-medium transition text-sm">الفرقة 1</a>
+                <a href="الفرقه الثانيه.HTML" class="px-3 py-1 rounded-lg bg-emerald-600 text-white font-medium transition text-sm shadow-md">الفرقة 2</a>
+                <a href="الفرقه الثالثه.html" class="px-3 py-1 rounded-lg hover:bg-emerald-100 text-gray-700 font-medium transition text-sm">الفرقة 3</a>
+                <a href="الفرقه الرابعه.html" class="px-3 py-1 rounded-lg hover:bg-emerald-100 text-gray-700 font-medium transition text-sm">الفرقة 4</a>
+            </div>
+
+            <a href="https://wa.me/201286094595" target="_blank" class="bg-green-500 hover:bg-green-600 text-white p-2 rounded-full shadow-lg transition transform hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                     <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.017-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.084 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                </svg>
             </a>
         </div>
-            
-        </details>
-            <br>
-            <a href=""><button>مبادئ التسويق </button> </a>
-            <br>
-        <details>
+    </nav>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="relative z-10 flex-grow container mx-auto px-4 py-12">
         
-        <summary> لعرض المحاضرات</summary>
-            <br>
+        <div class="glass-panel w-full max-w-3xl mx-auto rounded-3xl p-6 md:p-10 shadow-2xl">
+            
+            <div class="text-center mb-8">
+                <span class="bg-emerald-100 text-emerald-700 px-4 py-1 rounded-full text-sm font-bold mb-4 inline-block">الفرقة الثانية</span>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">جميع محاضرات الفرقة الثانية</h1>
+                <div class="h-1 w-24 bg-emerald-500 mx-auto rounded-full mt-2 mb-6"></div>
+                
+                <!-- زر الانتقال للترم الثاني -->
+                <a href="الفرقه الثانيه ترم ثاني.html" class="inline-flex items-center gap-2 bg-gradient-to-l from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white font-bold py-3 px-8 rounded-xl transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                    <span>الانتقال لمحاضرات الترم الثاني</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
 
-            
-            <a href="https://drive.google.com/file/d/15QMqaz1PiLsT-B7PSUL-ED1tENQ3F6Cj/view?usp=share_link" target="_new">بنك الأسئلة</details>
+            <!-- قائمة المواد -->
+            <div class="space-y-4">
+                
+                <!-- المادة 1 -->
+                <details class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <summary class="flex justify-between items-center p-4 font-bold text-lg text-gray-700 hover:bg-gray-50">
+                        <span>⚖️ القانون التجاري</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="p-6 bg-gray-50 content-box">
+                        <p class="text-gray-600 mb-4">اضغط على الرابط أدناه للوصول للمحتوى:</p>
+                        <a href="https://drive.google.com/file/d/15QMqaz1PiLsT-B7PSUL-ED1tENQ3F6Cj/view?usp=share_link" target="_blank" class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            بنك الأسئلة
+                        </a>
+                    </div>
+                </details>
 
-            <br>
-            
-            <a href=""><button>مبادئ محاسبه التكاليف</button></a>
+                <!-- المادة 2 -->
+                <details class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <summary class="flex justify-between items-center p-4 font-bold text-lg text-gray-700 hover:bg-gray-50">
+                        <span>📢 مبادئ التسويق</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="p-6 bg-gray-50 content-box">
+                        <a href="https://drive.google.com/file/d/15QMqaz1PiLsT-B7PSUL-ED1tENQ3F6Cj/view?usp=share_link" target="_blank" class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            بنك الأسئلة
+                        </a>
+                    </div>
+                </details>
 
-            <br>
+                <!-- المادة 3 -->
+                <details class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <summary class="flex justify-between items-center p-4 font-bold text-lg text-gray-700 hover:bg-gray-50">
+                        <span>💰 مبادئ محاسبة التكاليف</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="p-6 bg-gray-50 content-box text-center">
+                        <span class="text-gray-500 italic">سيتم إضافة المحتوى قريباً</span>
+                    </div>
+                </details>
 
-        <details>
-            
-        <summary> لعرض المحاضرات</summary> 
-            
-            <a href="">مبادئ الاقتصاد الجزئي</button></a>
-            
-            <br> 
-            
-        </details>
-            
-            <br>
+                <!-- المادة 4 -->
+                <details class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <summary class="flex justify-between items-center p-4 font-bold text-lg text-gray-700 hover:bg-gray-50">
+                        <span>🚚 إدارة اللوجستيات</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="p-6 bg-gray-50 content-box text-center">
+                        <span class="text-gray-500 italic">سيتم إضافة المحتوى قريباً</span>
+                    </div>
+                </details>
 
-            <a href=""><button>اداره اللوجستيات</button></a>
+                <!-- المادة 5 -->
+                <details class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <summary class="flex justify-between items-center p-4 font-bold text-lg text-gray-700 hover:bg-gray-50">
+                        <span>📉 مبادئ الاقتصاد الجزئي</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="p-6 bg-gray-50 content-box text-center">
+                        <span class="text-gray-500 italic">سيتم إضافة المحتوى قريباً</span>
+                    </div>
+                </details>
 
-            <br>
+            </div>
 
-        <details>
-            
-        <summary> لعرض المحاضرات</summary>
-            
-            <a href="">مبادئ الاقتصاد الجزئي</button></a>
-            
-        </details>
-            
-            <br>
-            
-            <a href=""><button>مبادئ الاقتصاد الجزئي</button></a>
-            
-                <br> 
-            
-        <details>
-            
-                <br>
-            
-        <summary> لعرض المحاضرات</summary>
-            
-                <a href="">مبادئ الاقتصاد الجزئي</button></a>
-            
-        </details>
-            
         </div>
-                <br>
-                <br>
-<img src="" alt="photo">
-            
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="bg-gray-800 text-white py-6 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p class="opacity-75 font-light">منصة الطلاب غير الرسمية &copy; 2024</p>
+        </div>
+    </footer>
+
 </body>
 </html>
